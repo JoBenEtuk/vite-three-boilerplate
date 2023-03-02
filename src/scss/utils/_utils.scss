@@ -6,28 +6,6 @@
   width: 100%;
 }
 
-%container {
-  width: 100vw;
-  margin-inline: auto;
-  padding-left: 6rem;
-  padding-right: 6rem;
-  @include respondMax("tablet") {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-
-%container-1 {
-  width: 100vw;
-  margin-inline: auto;
-  padding-left: 16rem;
-  padding-right: 16rem;
-  @include respondMax("tablet") {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-
 %center {
   align-items: center;
   display: flex;

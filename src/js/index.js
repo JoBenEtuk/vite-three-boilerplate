@@ -3,12 +3,9 @@ import Lenis from '@studio-freight/lenis'
 import each from 'lodash/each'
 import Detection from './classes/Detection'
 
-import Preloader from './components/Preloader'
-import Transition from './components/Transition'
 import Scene from './components/Scene'
 
 import Home from './pages/Home'
-import About from './pages/About'
 
 class App {
   constructor() {
@@ -16,12 +13,9 @@ class App {
 
     this.url = window.location.pathname
 
-    this.createPreloader()
     this.createPages()
     this.initLenis()
     this.createComponents()
-    this.createAnimations()
-    this.createTransition()
 
     this.addEventListeners()
     this.addLinksEventsListeners()
@@ -36,20 +30,9 @@ class App {
 
   createPages() {
     this.home = new Home()
-    this.about = new About()
-    // this.works = new Works();
-    // this.details = new Details();
 
     this.pages = {
       '/': this.home,
-      '/about': this.about,
-      //   "/works": this.works,
-    }
-
-    if (this.url.includes('/works/')) {
-      this.page = this.details
-    } else {
-      this.page = this.pages[this.url]
     }
   }
 
@@ -74,23 +57,6 @@ class App {
 
   createComponents() {
     this.scene = new Scene()
-  }
-
-  createAnimations() {}
-
-  createPreloader() {
-    this.preloader = new Preloader()
-
-    this.preloader.once('completed', this.onPreloaded.bind(this))
-  }
-
-  onPreloaded() {
-    this.onResize()
-    this.page.show()
-  }
-
-  createTransition() {
-    this.transition = new Transition()
   }
 
   async onChange({ push = true, url = null }) {

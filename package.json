@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "vite-pug-template",
+  "name": "vite-template",
   "version": "0.0.0",
   "description": "Template to quickly code in Threejs, powered by Vite.",
   "author": "Etuk Josiah Benjamin <etukjosiahbenjamin@gmail.com>",
